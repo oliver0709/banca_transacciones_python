@@ -1,0 +1,17 @@
+a = 20
+b = -50
+c = 30
+d = -15.89
+lista_comprobacion = [a, b, c, d]
+suma = 0
+
+
+for i in lista_comprobacion:
+    if isinstance (i, int):
+        suma += i
+    if isinstance (i, float):
+        suma += i
+
+media = suma / len(lista_comprobacion)
+print("La suma de las transacciones bancarias:", suma)
+print("La media de las transacciones bancarias:", media)

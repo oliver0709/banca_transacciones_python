@@ -1,0 +1,34 @@
+# Este programa creara una serie de valores de transacciones bancarias de un usuario, las cuales se mostraran en un informe, detallando tambien el total y la media de las mismas
+
+
+transacciones = []  # Lista para almacenar las transacciones
+
+c = "si"
+while c != "no":
+    # Se solicita al usuario ingresar una transacción
+    transaccion = float(input("Ingrese el valor de la transacción: "))
+    transacciones.append(transaccion)  # Se agrega la transacción a la lista
+
+  
+    c = input("¿Quieres ingresar otra transacción? (si, no): ")
+
+
+suma_enteros = 0
+suma_decimales = 0
+
+
+for i in transacciones:
+    if isinstance(i, int):
+        suma_enteros += i
+    elif isinstance(i, float):
+        suma_decimales += i
+
+
+total = suma_enteros + suma_decimales
+
+# Se calcula la media de las transacciones
+media = total / len(transacciones)
+
+# Se muestra el total y la media de las transacciones
+print("El total de las transacciones es:", total)
+print("La media de las transacciones es:", media)
